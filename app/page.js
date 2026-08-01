@@ -1,103 +1,72 @@
-import Image from "next/image";
+import About from "@/components/about";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import Hero from "@/components/hero";
+import Leadership from "@/components/LeaderShip";
+import Navbar from "@/components/Navbar";
+import Partners from "@/components/Partners";
+import EngineeringServices from "@/components/ServiceSection";
+
+// Next.js App Router metadata export
+export const metadata = {
+  title: "Dream Den Realty | Best Real Estate Consultant in Bhiwandi",
+  description:
+    "Dream Den Realty is a trusted real estate consultancy in Bhiwandi, Maharashtra, helping families find their dream homes since 2015. Discover affordable plots like Amodha Rustic and expert interior solutions with Dream Den – Home Interiors.",
+  keywords: [
+    "Dream Den Realty",
+    "real estate Bhiwandi",
+    "plots in Bhiwandi",
+    "Amodha Rustic",
+    "home interiors Bhiwandi",
+    "property consultants",
+    "buy plots Maharashtra",
+    "Dream Den Interiors",
+    "Suraj Gupta"
+  ],
+  authors: [{ name: "Dream Den Realty" }],
+  creator: "Dream Den Realty",
+  robots: "index, follow",
+  metadataBase: new URL("https://dreamdenrealty.com"),
+  openGraph: {
+    title: "Dream Den Realty | Trusted Real Estate Experts in Bhiwandi",
+    description:
+      "Discover dream plots and premium home interior solutions in Bhiwandi with Dream Den Realty. Established in 2015, led by Suraj Gupta.",
+    url: "https://dreamdenrealty.com",
+    siteName: "Dream Den Realty",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://dreamdenrealty.com/dreamdenlogo.png",
+        width: 1200,
+        height: 630,
+        alt: "Dream Den Realty - Real Estate in Bhiwandi"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dream Den Realty | Trusted Real Estate Experts in Bhiwandi",
+    description:
+      "Real estate consultancy offering plots, home interiors, and expert advice in Bhiwandi since 2015.",
+    images: ["https://dreamdenrealty.com/dreamdenlogo.png"],
+    site: "@dreamdenrealty"
+  },
+   
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+      <Partners />
+      <Leadership />
+      <EngineeringServices />
+      <ContactSection />
+      <Footer />
+    </>
   );
 }
+
